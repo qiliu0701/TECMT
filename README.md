@@ -1,4 +1,4 @@
-# Research-on-Thermal-Error-Compensation-of-Machine-Tools
+# Research-on-Thermal-Error-Compensation-of-Machine-Tools (TECMT)
 This is the project database for Project “Research on Thermal Error Compensation of Machine Tools”.
 
 ## Project Abstract
@@ -27,8 +27,9 @@ features or constraints to data-driven models.
 
 ## Repository structure
 ### C#
-1. The 3 .ddl files (EZNcAut312.dll, EZSockets.dll, Interop.EZNCAUTLib.dll) under the MtcLibrary1 directory are necessary. Please add them as project dependencies.
-2. Install the following packages in the NuGet tool of Visual Studio 2022.
+1. The 3 .ddl files (EZNcAut312.dll, EZSockets.dll, Interop.EZNCAUTLib.dll) under the MtcLibrary1 directory are necessary. 
+Please add them as project dependencies.
+2. Install the following packages in the NuGet tool of Visual Studio 2022.   
 ![img.png](img.png)
 #### Compensation 
 ##### MTC202501
@@ -37,7 +38,10 @@ The main program for the thermal error compensation of the machine tool used for
 The function library for the thermal error compensation of the machine tool used for edge deployment.
 
 ### Data
-Temperature and thermal displacement data, which are used for importing into MySQL.
+Temperature and thermal displacement data, which are used for importing into MySQL. The format of a single data table is as follows:
+![img_1.png](img_1.png)
+The data in the 2 - 7 column represents temperature values (tem), while the data in the 8 - 12 column represents thermal displacement values (dis).
+![img_2.png](img_2.png)
 
 ### Figure
 #### cutting experiments
@@ -50,5 +54,21 @@ Figures of the temperature and displacement measurement points show the installa
 The TE compensation Terminal developed in this project.
 
 ### Python
-#### LSTM_RES_CNN
-The architecture and parameters of the Long Short-Term Memory Residual Convolutional Neural Network (LSTM_RES_CNN).
+python --version   
+Python 3.11.5
+#### LSTM_RES_CNN/Architecture and parameters.py
+The architecture and parameters of the Long Short-Term Memory Residual Convolutional Neural Network (LSTM_RES_CNN).     
+TensorFlow==2.13.0, numpy==1.26.4
+#### Data processing/tcp_data.py
+Data acquisition program for temperature and thermal displacement (need data collector).      
+SQLAlchemy==1.4.39, pandas==2.0.3, mysql-connector-python==9.0.0
+#### Data processing/tcp_data.py
+Includes a SVD filtering and a bandpass envelope filtering.    
+scipy==1.11.1, numpy==1.26.4
+#### Openvino/convert.py
+Convert the TensorFlow model into an accelerated inference model that can be deployed on the edge device, using OpenVINO.   
+openvino==2025.3.0
+
+## Publication
+![img_3.png](img_3.png)
+_Journal of Intelligent Manufacturing_ (Revisions Being Processed)
