@@ -30,7 +30,7 @@ features or constraints to data-driven models.
 1. The 3 .ddl files (EZNcAut312.dll, EZSockets.dll, Interop.EZNCAUTLib.dll) under the MtcLibrary1 directory are necessary. 
 Please add them as project dependencies.
 2. Install the following packages in the NuGet tool of Visual Studio 2022.   
-![img.png](img.png)
+![img.png](Files%2Fimg.png)
 #### Compensation 
 ##### MTC202501
 The main program for the thermal error compensation of the machine tool used for edge deployment.
@@ -39,9 +39,9 @@ The function library for the thermal error compensation of the machine tool used
 
 ### Data
 Temperature and thermal displacement data, which are used for importing into MySQL. The format of a single data table is as follows:
-![img_1.png](img_1.png)
+![img_1.png](Files%2Fimg_1.png)
 The data in the 2 - 7 column represents temperature values (tem), while the data in the 8 - 12 column represents thermal displacement values (dis).
-![img_2.png](img_2.png)
+![img_2.png](Files%2Fimg_2.png)
 
 ### Figure
 #### cutting experiments
@@ -70,5 +70,6 @@ Convert the TensorFlow model into an accelerated inference model that can be dep
 openvino==2025.3.0
 
 ## Publication
-![img_3.png](img_3.png)
+![img_3.png](Files%2Fimg_3.png)
 _Journal of Intelligent Manufacturing_ (Revisions Being Processed)
+[JIM (Revisions Being Processed).pdf](Files%2FJIM%20%28Revisions%20Being%20Processed%29.pdf)
